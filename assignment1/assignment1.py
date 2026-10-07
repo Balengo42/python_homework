@@ -59,8 +59,10 @@ def grade(*args):
 
 # Task 6: Use a For Loop with a Range
 def repeat(string, count):
+    result = ""
     for i in range(count):
-        return string * count
+        result = result + string
+    return result
 
 # Task 7: Student Scores, Using **kwargs
 def student_scores(postional, **kwargs):
