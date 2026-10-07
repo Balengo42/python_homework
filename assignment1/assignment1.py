@@ -88,7 +88,6 @@ def titleize(a_string):
             result.append(word)
     return " ".join(result)
 
-print(titleize("war and peace"))
 
 # Task 9: Hangman, with more String Operations
 def hangman(secret,guess):
