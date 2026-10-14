@@ -69,7 +69,7 @@ def all_employees_dict():
     for row in employees["rows"]:
         result[row[employee_id_column]] = employee_dict(row)
     return result
-print(all_employees_dict)
+print(all_employees_dict())
 
 # Task 10: use the os Module
 def get_this_value():
@@ -128,10 +128,10 @@ print(minutes_list)
 def write_sorted_list():
     minutes_list.sort(key=lambda x:x[1])
     changed = list(map(lambda x: (x[0], datetime.strftime(x[1], "%B %d, %Y")), minutes_list))
-    with open('./minutes.csv', 'w') as file:
+    with open('./minutes.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(minutes1["fields"])
         writer.writerows(changed)
 
     return changed 
-write_sorted_list
+write_sorted_list()
