@@ -1,6 +1,6 @@
 import csv 
 
-with open("../csv/employees.csv ", newline= "") as file:
+with open("../csv/employees.csv", newline= "") as file:
     reader = csv.reader(file)
     rows = [row for row in reader]
 
