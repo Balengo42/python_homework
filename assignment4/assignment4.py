@@ -51,7 +51,7 @@ clean_data["Age"] = pd.to_numeric(clean_data["Age"], errors = "coerce")
 clean_data["Salary"] = pd.to_numeric(clean_data["Salary"],  errors = "coerce")
 
 
-clean_data = clean_data.fillna({"Salary": clean_data["Salary"].mean(),"Age": clean_data["Age"].mean()})
+clean_data = clean_data.fillna({"Salary": clean_data["Salary"].median(),"Age": clean_data["Age"].mean()})
 
 
 clean_data["Hire Date"]= pd.to_datetime(clean_data["Hire Date"], format='mixed')
